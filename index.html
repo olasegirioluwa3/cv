@@ -25,7 +25,54 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script> -->
-    
+     <!-- Print Styles -->
+    <style>
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact; /* For Chrome and Safari */
+                color-adjust: exact; /* For Firefox */
+            }
+
+            /* Ensure background colors are printed */
+            .bg-primary {
+                background-color: #007bff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .text-primary {
+                color: #007bff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            /* Hide non-essential print elements */
+            .navbar,
+            .btn-play {
+                display: none !important;
+            }
+
+            /* Adjust layout for printing */
+            .container-fluid {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .col-lg-5 img {
+                max-width: 150px;
+            }
+
+            .container {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+    <script>
+        function myPrint() {
+            console.log("love up");
+            window.print();
+        }
+    </script> 
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -86,9 +133,9 @@
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
                     <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Femi Olasegiri</h1>
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Data, Software and AI Engineer, IT Advisor, your favourite CTO, and Co-founder</div>
+                    <div class="typed-text d-none">Data Engineer, Software Engineer, AI Engineer, IT Advisor, your favourite CTO, and Co-founder</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <button href="" class="btn btn-outline-light mr-5">Download CV</button>
+                        <button onclick="myPrint()" class="btn btn-outline-light mr-5">Download CV</button>
                         <!-- <button type="button" class="btn-play" data-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                             <span></span>
@@ -211,7 +258,7 @@
                         </div>
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Software Engineer / IT Avisor</h5>
+                            <h5 class="font-weight-bold mb-1">Software Engineer / IT Advisor</h5>
                             <p class="mb-2"><strong>InstinctWave Group / Africa digital Economy Forum (ADEFORUM) (Ghana)</strong> | <small>2021 - 2023</small></p>
                             <p>Provided IT advisory services and software development expertise. Played a key role in digital transformation projects, enabling businesses to leverage technology for growth and efficiency.</p>
                         </div>
@@ -322,7 +369,7 @@
                     <h3 class="text-center text-primary mb-4">AI Engineering</h3>
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Machine Learning</h6>
+                            <h6 class="font-weight-bold">Prompt Engineering / Machine Learning</h6>
                             <h6 class="font-weight-bold">90%</h6>
                         </div>
                         <div class="progress">
@@ -331,7 +378,7 @@
                     </div>
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Deep Learning (TensorFlow, PyTorch)</h6>
+                            <h6 class="font-weight-bold">Data Preprocessing & ETL</h6>
                             <h6 class="font-weight-bold">85%</h6>
                         </div>
                         <div class="progress">
@@ -340,7 +387,7 @@
                     </div>
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Data Preprocessing & ETL</h6>
+                            <h6 class="font-weight-bold">Model Deployment & MLOps</h6>
                             <h6 class="font-weight-bold">90%</h6>
                         </div>
                         <div class="progress">
@@ -349,7 +396,7 @@
                     </div>
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Model Deployment & MLOps</h6>
+                            <h6 class="font-weight-bold">Deep Learning (TensorFlow, PyTorch)</h6>
                             <h6 class="font-weight-bold">85%</h6>
                         </div>
                         <div class="progress">
@@ -427,7 +474,7 @@
 
 
     <!-- WYNTK Start -->
-    <div class="container-fluid pt-5" id="wyntk">
+    <!-- <div class="container-fluid pt-5" id="wyntk">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">WYNTK</h1>
@@ -484,7 +531,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- WYNTK End -->
 
 
@@ -509,70 +556,83 @@
                 <!-- AI Engineering Project 1 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item ai">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="AI Project 3">
+                        <img class="img-fluid rounded w-100" src="img/desktop.png" alt="AI Project 3">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
                             <a href="javascript:void(0);" onclick="alert('This project is in a private repository due to confidentiality agreements. Contact me for more details!');">
                                 <i class="fa fa-lock text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
-                    <h5 class="text-center">Custom AI Solution for E-commerce Platform</h5>
-                    <p class="text-center">Developed a machine learning model to improve product recommendations and user engagement, leading to a 20% increase in conversion rates. Built with Python, TensorFlow, and AWS.</p>
+                    <h5 class="text-center">AI Solution for Customer Support Platform</h5>
+                    <p class="text-center">Developed a platform using machine learning and Natural Language Processing model to improve user engagement, leading to a 20% increase in conversion rates. Built with Python and NodeJS, GPT-3.5, and Cloud, ZionAI.</p>
                 </div>
                 <!-- Web Development Project 1 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item webdev">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="Web Dev Project 1">
+                        <img class="img-fluid rounded w-100" src="img/zru.png" alt="Web Dev Project 1">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/yourusername/webdev-project-1" target="_blank">
-                                <i class="fa fa-github text-white" style="font-size: 60px;"></i>
+                            <a href="javascript:void(0);" onclick="alert('This project is in a private repository due to confidentiality agreements. Contact me for more details!');">
+                                <i class="fa fa-lock text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
-                    <h5 class="text-center">Full-Stack E-Commerce Platform</h5>
-                    <p class="text-center">Developed with Next.js and Node.js, featuring user authentication, shopping cart, and payment integration.</p>
+                    <h5 class="text-center">Full-Stack Corporate Website / Platform</h5>
+                    <p class="text-center">Developed with Next.js and Node.js, featuring user authentication, analytical dashboards, portals and robust payment integrations, Zion Reborn University.</p>
                 </div>
                 <!-- Cloud & DevOps Project 1 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item cloud">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="Cloud Project 1">
+                        <img class="img-fluid rounded w-100" src="img/thrivebizng.png" alt="Cloud Project 1">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/yourusername/cloud-project-1" target="_blank">
-                                <i class="fa fa-github text-white" style="font-size: 60px;"></i>
+                            <a href="javascript:void(0);" onclick="alert('This project is in a private repository due to confidentiality agreements. Contact me for more details!');">
+                                <i class="fa fa-lock text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                     <h5 class="text-center">Automated CI/CD Pipeline</h5>
-                    <p class="text-center">Implemented using AWS, Docker, and Jenkins to streamline deployment processes for microservices architecture.</p>
+                    <p class="text-center">Implemented using AWS EC2 and Git Actions to streamline deployment processes for microservices architecture, GIZ.</p>
                 </div>
                 <!-- AI Engineering Project 2 -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item ai">
+                <!-- <div class="col-lg-4 col-md-6 mb-4 portfolio-item ai">
                     <div class="position-relative overflow-hidden mb-2">
                         <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="AI Project 2">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/yourusername/ai-project-2" target="_blank">
+                            <a href="" target="_blank">
                                 <i class="fa fa-github text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                     <h5 class="text-center">Natural Language Processing Tool</h5>
                     <p class="text-center">Developed with Python, NLTK, and SpaCy to analyze and categorize large datasets of text for sentiment analysis.</p>
-                </div>
+                </div> -->
                 <!-- Web Development Project 2 -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item webdev">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="Web Dev Project 2">
+                        <img class="img-fluid rounded w-100" src="img/airplane.jpg" alt="Web Dev Project 2">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/yourusername/webdev-project-2" target="_blank">
+                            <a href="https://github.com/olasegirioluwa3/rent-or-buy-airplane-py" target="_blank">
                                 <i class="fa fa-github text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
-                    <h5 class="text-center">Real-Time Chat Application</h5>
-                    <p class="text-center">Built with React.js and Node.js, supporting real-time messaging, notifications, and user presence tracking.</p>
+                    <h5 class="text-center">Application built to determine Airplane Aquisition</h5>
+                    <p class="text-center">Built with Python, Screamlit, and bootstrap App to calculate cost of renting or buying an airplane.</p>
                 </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item webdev">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/real-estate.jpg" alt="Web Dev Project 2">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="https://github.com/olasegirioluwa3/real-estate" target="_blank">
+                                <i class="fa fa-github text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-center">Python based Real Estate Listing API</h5>
+                    <p class="text-center">Built with Python, Flask and MySQL for listing of real estate products.</p>
+                </div>
+                
                 <!-- Cloud & DevOps Project 2 -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item cloud">
+                <!-- <div class="col-lg-4 col-md-6 mb-4 portfolio-item cloud">
                     <div class="position-relative overflow-hidden mb-2">
                         <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="Cloud Project 2">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
@@ -583,7 +643,7 @@
                     </div>
                     <h5 class="text-center">Serverless API with AWS Lambda</h5>
                     <p class="text-center">Implemented a highly scalable API using AWS Lambda and API Gateway for seamless integration with front-end applications.</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>    
@@ -757,7 +817,7 @@
 
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
+    <!-- <div class="container-fluid py-5" id="contact">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
@@ -800,7 +860,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Contact End -->
 
 
@@ -833,20 +893,6 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-    <script>
-        document.getElementById('download-cv').addEventListener('click', function() {
-            var element = document.getElementById('home');
-            html2pdf(element, {
-                margin: 1,
-                filename: 'Femi_Olasegiri_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            });
-        });
-    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
