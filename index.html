@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Oluwafemi Olasegiri - CV</title>
+    <title>Oluwafemi Olasegiri | Principal Software Architect & Lead Full-Stack Engineer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Olasegiri Oluwafemi Professional Portfolio" name="keywords">
-    <meta content="Your favorite Data Engineer, Software Engineer, AI Engineer, IT Advisor, CTO, and Co-Founder" name="description">
+    <meta content="Oluwafemi Olasegiri, Staff Backend Engineer, Principal Software Architect, Flutter Mobile Engineer, Next.js, React, Node.js, Fastify, TypeScript, IoT, ESP32, Gemini, OpenAI, GCP" name="keywords">
+    <meta content="10+ years designing mission-critical distributed systems, multi-tenant SaaS platforms, Flutter mobile apps, offline-first IoT edge hardware, and scale-to-zero cloud architectures." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -24,51 +24,157 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-     <!-- Print Styles -->
+
+    <!-- Custom & Print Styles -->
     <style>
+        .badge-tech {
+            display: inline-block;
+            background: #eef2f7;
+            color: #0d233a;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            margin: 4px 3px;
+            border-radius: 20px;
+            border: 1px solid #d0dbe5;
+            transition: all 0.2s ease;
+        }
+        .badge-tech:hover {
+            background: #007bff;
+            color: #ffffff;
+            border-color: #007bff;
+        }
+        .skill-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        .skill-card h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-card h4 i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .project-card-body {
+            padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 8px;
+        }
+        .project-links {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #edf2f7;
+        }
+        .stat-badge {
+            background: #f8fafc;
+            border-left: 4px solid #007bff;
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        .impact-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 26px 20px;
+            margin-bottom: 24px;
+            height: 100%;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.12);
+            border-color: #007bff;
+        }
+        .impact-number {
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: #007bff;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+        .founder-callout {
+            background: linear-gradient(135deg, #0d233a 0%, #1a365d 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 30px rgba(13, 35, 58, 0.15);
+        }
+
         @media print {
             body {
-                -webkit-print-color-adjust: exact; /* For Chrome and Safari */
-                color-adjust: exact; /* For Firefox */
-            }
-
-            /* Ensure background colors are printed */
-            .bg-primary {
-                background-color: #007bff !important;
                 -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                background-color: #ffffff !important;
+                color: #000000 !important;
             }
-
-            .text-primary {
-                color: #007bff !important;
-                -webkit-print-color-adjust: exact;
-            }
-
-            /* Hide non-essential print elements */
-            .navbar,
-            .btn-play {
+            .navbar, .btn-play, .scroll-to-bottom, .back-to-top, #portfolio-flters, .project-links {
                 display: none !important;
             }
-
-            /* Adjust layout for printing */
             .container-fluid {
                 width: 100%;
                 margin: 0;
                 padding: 0;
             }
-
-            .col-lg-5 img {
-                max-width: 150px;
-            }
-
             .container {
+                max-width: 100% !important;
+                width: 100% !important;
                 margin: 0;
-                padding: 0;
+                padding: 10px;
+            }
+            #home {
+                min-height: auto !important;
+                background: #007bff !important;
+                padding: 20px 0 !important;
+                margin-bottom: 20px !important;
+            }
+            .col-lg-5 img {
+                max-width: 120px !important;
             }
         }
     </style>
     <script>
         function myPrint() {
-            console.log("love up");
             window.print();
         }
     </script> 
@@ -78,7 +184,7 @@
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Femi</span>Quick</h1>
+            <h1 class="m-0 display-5"><span class="text-primary">Femi</span>Olasegiri</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -87,49 +193,46 @@
             <div class="navbar-nav m-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Quality</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#impact" class="nav-item nav-link">Impact & ROI</a>
+                <a href="#qualification" class="nav-item nav-link">Experience</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#portfolio" class="nav-item nav-link">Architecture & Projects</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="#about" class="btn btn-outline-primary d-none d-lg-block">Meet Me</a>
+            <a href="mailto:olasegirioluwafemi@gmail.com" class="btn btn-outline-primary d-none d-lg-block">Get in Touch</a>
         </div>
     </nav>
     <!-- Navbar End -->
-
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
-
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0 text-center">
+                    <img class="img-fluid w-75 rounded-circle shadow-lg border border-white" src="img/profile.jpg" alt="Oluwafemi Olasegiri">
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Femi Olasegiri</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Data Engineer, Software Engineer, AI Engineer, IT Advisor, your favourite CTO, and Co-founder</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <button onclick="myPrint()" class="btn btn-outline-light mr-5">Download CV</button>
+                    <h3 class="text-white font-weight-normal mb-2">Hello, I'm</h3>
+                    <h1 class="display-4 text-uppercase font-weight-bold text-white mb-2">Oluwafemi Olasegiri</h1>
+                    <h2 class="h4 text-light font-weight-normal mb-3">
+                        <span class="typed-text-output font-weight-bold text-warning"></span>
+                    </h2>
+                    <div class="typed-text d-none">Principal Software Architect, Staff Backend & Distributed Systems Lead, Full-Stack & Mobile Lead (Flutter / Next.js), Cloud Infrastructure Specialist, IoT Systems Architect, Founder & Lead Engineer</div>
+                    
+                    <p class="text-white-50 lead mb-4" style="max-width: 620px;">
+                        10+ years engineering high-concurrency Node.js/TypeScript distributed systems, cross-platform Flutter mobile applications, scale-to-zero GCP Cloud Run architectures, and offline-first IoT edge hardware.
+                    </p>
+
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <button onclick="myPrint()" class="btn btn-light font-weight-bold text-primary mr-3 mb-2 shadow-sm">
+                            <i class="fa fa-print mr-2"></i>Print / Download CV
+                        </button>
+                        <a href="https://github.com/olasegirioluwa3" target="_blank" class="btn btn-outline-light mr-2 mb-2">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/oluwafemi-olasegiri" target="_blank" class="btn btn-outline-light mr-2 mb-2">
+                            <i class="fab fa-linkedin-in mr-2"></i>LinkedIn
+                        </a>
                     </div>
                 </div>
             </div>
@@ -137,91 +240,264 @@
     </div>
     <!-- Header End -->
 
-
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Executive Summary</h1>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
+                <div class="col-lg-5 pb-4 pb-lg-0 text-center">
+                    <img class="img-fluid rounded shadow w-100" src="img/about.jpg" alt="Oluwafemi Olasegiri">
                 </div>
                 <div class="col-lg-7">
-                    <h3 class="mb-4">Oluwafemi Olasegiri</h3>
-                    <p>Oluwafemi is a seasoned software and data engineer with a decade of experience in both hands-on work and training. He is passionate about solving real-world problems, leveraging both his technical expertise and soft skills.</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Femi Olasegiri</span></h6></div>
-                        <!-- <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">1 April 1990</span></h6></div> -->
+                    <h3 class="mb-3 font-weight-bold">Oluwafemi Olasegiri</h3>
+                    <h5 class="text-primary mb-3">Principal Software Architect & Lead Full-Stack Engineer | Technical Founder</h5>
+                    <p class="text-muted">
+                        I am a hands-on software architect, full-stack engineer, and technical founder with <strong>10+ years of engineering experience</strong> moving complex systems from concept to production. As Founder and Lead Engineer of <strong>Zion Reborn Limited</strong>, I personally architect and build solutions across the technology spectrum: enterprise multi-tenant SaaS (ZED School Management & CBT) serving 2,500+ users, production cross-platform mobile apps with <strong>Flutter</strong> on the Google Play Store, custom offline-first biometric IoT hardware (ESP32), and autonomous AI app-builders (Alphado) on GCP.
+                    </p>
+                    <p class="text-muted">
+                        My frontend and mobile stack features <strong>Next.js, React, Flutter (iOS & Android), Tailwind CSS, and react-icons</strong>, paired with high-performance backends in <strong>Node.js (Fastify/Express), TypeScript, MongoDB, and Redis</strong>. I build cost-conscious, reliable systems with scale-to-zero serverless deployments on Google Cloud Run.
+                    </p>
+
+                    <div class="row mb-4">
                         <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">B.Sc. Computer Science</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">10 Years</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone/WhatsApp: <span class="text-secondary">+2348101336055</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">10+ Years</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">olasegirioluwafemi@gmail.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">262 Odo-Akuo Street, Ogele, Ilorin, Nigeria</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Consultancy: <span class="text-secondary">Available</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Phone/WhatsApp: <span class="text-secondary">+234 810 133 6055</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Company: <span class="text-secondary">Zion Reborn Limited (CAC RC-7487510)</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Availability: <span class="text-primary font-weight-bold">Global Remote (Staff / Principal / Lead)</span></h6></div>
                     </div>
-                    <a href="mailto:olasegirioluwafemi@gmail.com" class="btn btn-outline-primary mr-4">Consult Me</a>
-                    <a href="#project" class="btn btn-outline-primary">Learn More</a>
+                    <div>
+                        <a href="mailto:olasegirioluwafemi@gmail.com" class="btn btn-primary mr-3 shadow-sm">
+                            <i class="fa fa-envelope mr-2"></i>Contact Me
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline-primary">
+                            <i class="fa fa-layer-group mr-2"></i>View System Architecture
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
 
+    <!-- Impact & Founder ROI Start -->
+    <div class="container-fluid py-5 bg-light" id="impact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Impact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Founder ROI & Impact</h1>
+            </div>
+            
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h3 class="font-weight-bold text-dark">Why Tech Founders & Startups Hire Me</h3>
+                    <p class="lead text-muted">
+                        I combine the business urgency and capital efficiency of a founder with the rigorous execution of a 10+ year principal engineer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Impact Metric 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="impact-number">> 70% Cost Cut</div>
+                        <h5 class="font-weight-bold text-dark mb-2">Cloud Infrastructure Optimization</h5>
+                        <p class="text-muted small mb-0">
+                            Replaced idle always-on virtual machines with <strong>scale-to-zero Google Cloud Run</strong>, automated Cloud Build CI/CD, and Workload Identity Federation. Achieved instant cold starts and slashed idle cloud overhead by over 70%.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Metric 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="impact-number">0-to-1 Velocity</div>
+                        <h5 class="font-weight-bold text-dark mb-2">Full-Spectrum Product Ownership</h5>
+                        <p class="text-muted small mb-0">
+                            Single-handedly engineered complete product loops from zero to production: <strong>ESP32 hardware firmware</strong>, high-concurrency <strong>Fastify/Node.js backends</strong>, modern <strong>Next.js web dashboards</strong>, and live <strong>Flutter mobile apps</strong> on the Google Play Store.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Metric 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="impact-number">2,500+ Users</div>
+                        <h5 class="font-weight-bold text-dark mb-2">Multi-Tenant SaaS Scaling</h5>
+                        <p class="text-muted small mb-0">
+                            Architected the multi-tenant core of <strong>ZED Platform</strong> across 15+ organizations with strict data isolation, role-based authorization, and sub-100ms API response latencies with zero security incidents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Metric 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="impact-number">100% Deterministic</div>
+                        <h5 class="font-weight-bold text-dark mb-2">Mission-Critical Integrity</h5>
+                        <p class="text-muted small mb-0">
+                            Engineered zero-error algorithms for complex academic grading rubrics, automated report card broadsheets, and multi-channel billing transactions with idempotent webhook handling.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Metric 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="impact-number">150 in &lt;15 Mins</div>
+                        <h5 class="font-weight-bold text-dark mb-2">Offline-First Edge Resilience</h5>
+                        <p class="text-muted small mb-0">
+                            Designed the <strong>ZED Biometric (ESP32 + R307)</strong> hardware appliance storing 500+ templates locally, capturing 150+ check-ins in under 15 minutes during power or internet outages, with seamless cloud reconciliation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Metric 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <div class="impact-number">Capital-Efficient AI</div>
+                        <h5 class="font-weight-bold text-dark mb-2">Pragmatic LLM Orchestration</h5>
+                        <p class="text-muted small mb-0">
+                            Integrated <strong>Google Gemini and OpenAI</strong> for curriculum RAG and automated exam generation while keeping student progress local on mobile devices (Flutter), eliminating redundant database reads and runaway API token costs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Founder-to-Founder Value Proposition Banner -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="founder-callout">
+                        <div class="row align-items-center">
+                            <div class="col-lg-9 text-lg-left text-center mb-3 mb-lg-0">
+                                <h4 class="text-white font-weight-bold mb-2">
+                                    <i class="fa fa-handshake text-warning mr-2"></i>My Commitment to Early-Stage & High-Growth Founders
+                                </h4>
+                                <p class="text-white-50 mb-0">
+                                    "When you bring me onto your engineering team, you get someone who thinks about your runway, communicates directly with your customers, architects without unnecessary bloat, and delivers production code from the database schema up to the mobile client."
+                                </p>
+                            </div>
+                            <div class="col-lg-3 text-lg-right text-center">
+                                <a href="mailto:olasegirioluwafemi@gmail.com" class="btn btn-warning btn-lg font-weight-bold text-dark shadow">
+                                    <i class="fa fa-rocket mr-2"></i>Hire Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Impact & Founder ROI End -->
+
     <!-- Qualification Start -->
     <div class="container-fluid py-5" id="qualification">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Track Record</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Experience & Education</h1>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Education</h3>
+            <div class="row">
+                <!-- Experience -->
+                <div class="col-lg-6 mb-5">
+                    <h3 class="mb-4 font-weight-bold text-dark"><i class="fa fa-briefcase text-primary mr-2"></i>Engineering Experience</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
+                        
+                        <!-- Role 1 -->
+                        <div class="position-relative mb-5">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Bachelor In Computer Science</h5>
-                            <p class="mb-2"><strong>Ajayi Crowther University</strong> | <small>2021 - 2023</small></p>
-                            <p>Completed a rigorous program focused on software development, data structures, and algorithms. Developed strong problem-solving skills and gained hands-on experience with modern programming languages and tools.</p>
+                            <h5 class="font-weight-bold mb-1">Principal Software Architect & Lead Engineer (Founder)</h5>
+                            <p class="mb-2 text-primary font-weight-bold">Zion Reborn Limited | <small class="text-muted">2023 – PRESENT</small></p>
+                            <p class="text-muted mb-2">
+                                Directing technical architecture, full-stack web/mobile engineering, IoT firmware, and cloud infrastructure across the Zion technology ecosystem.
+                            </p>
+                            <ul class="text-muted small pl-3 mb-0">
+                                <li><strong>ZED Multi-Tenant Core:</strong> Built Fastify/Node.js/TypeScript backend powering school management, report cards, and CBT exams for 2,500+ users across 15+ institutions with strict tenant isolation and sub-100ms API response latencies.</li>
+                                <li><strong>Mobile AI App (ZED Prepare AI):</strong> Shipped cross-platform mobile application using <strong>Flutter</strong> (live on <a href="https://play.google.com/store/apps/details?id=ng.com.zionai.prepareai" target="_blank">Google Play Store</a>) with a <strong>Node.js</strong> backend. Integrated <strong>Google Gemini and OpenAI</strong> for curriculum-aware RAG learning with local-first device storage.</li>
+                                <li><strong>Autonomous App-Builder (Alphado):</strong> Architected and built <a href="https://alphado.zionai.com.ng" target="_blank">Alphado</a> using <strong>Next.js, Node.js, Lifo runtime, Monaco Editor, and GCP</strong> for real-time app generation, testing, and containerized deployment.</li>
+                                <li><strong>Offline-First IoT Biometrics:</strong> Designed ESP32 + R307 optical fingerprint hardware & firmware storing 500+ templates locally with encrypted batch cloud sync, processing 150+ staff attendances in under 15 minutes offline.</li>
+                                <li><strong>Scale-to-Zero Cloud Infrastructure:</strong> Architected Google Cloud Run (europe-west1) deployments using Cloud Build and Workload Identity Federation, decreasing idle hosting costs by 70%+.</li>
+                            </ul>
                         </div>
-                        <div class="position-relative mb-4">
+
+                        <!-- Role 2 -->
+                        <div class="position-relative mb-5">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">HND In Computer Science</h5>
-                            <p class="mb-2"><strong>Kwara State Polytechnic</strong> | <small>2017 - 2019</small></p>
-                            <p>Specialized in network administration and database management. Participated in projects that involved designing and implementing computer networks, as well as managing and securing databases.</p>
+                            <h5 class="font-weight-bold mb-1">Senior AI & Platform Engineer (LLMOps / MLOps)</h5>
+                            <p class="mb-2 text-primary font-weight-bold">CareerOnDemand / VBOHQ (USA) | <small class="text-muted">2023 – PRESENT</small></p>
+                            <p class="text-muted mb-2">
+                                Led production deployment, monitoring, and scaling of large language model workflows and data pipelines.
+                            </p>
+                            <ul class="text-muted small pl-3 mb-0">
+                                <li>Engineered automated LLM evaluation frameworks, prompt caching, and cost-optimized model routing between specialized SLMs and frontier LLMs.</li>
+                                <li>Constructed low-latency semantic search with Redis caching and vector databases, reducing token costs while ensuring high precision.</li>
+                                <li>Maintained containerized CI/CD delivery pipelines on Docker with automated integration testing and telemetry.</li>
+                            </ul>
                         </div>
+
+                        <!-- Role 3 -->
+                        <div class="position-relative mb-5">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Senior Software Engineer & IT Advisor</h5>
+                            <p class="mb-2 text-primary font-weight-bold">InstinctWave Group / Africa Digital Economy Forum (Ghana) | <small class="text-muted">2021 – 2023</small></p>
+                            <p class="text-muted mb-2">
+                                Led technical architecture and web platform engineering for pan-African digital summits and corporate systems.
+                            </p>
+                            <ul class="text-muted small pl-3 mb-0">
+                                <li>Built and maintained high-traffic web applications, live voting engines, and ticketing portals serving thousands of concurrent users.</li>
+                                <li>Led migration of legacy monolithic architectures into containerized microservices, achieving 99.9% uptime.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 4 -->
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">ND In Computer Science</h5>
-                            <p class="mb-2"><strong>Kwara State Polytechnic</strong> | <small>2014 - 2016</small></p>
-                            <p>Foundation in computer science principles, including programming, computer systems, and software engineering. Gained practical experience in coding and system maintenance.</p>
+                            <h5 class="font-weight-bold mb-1">Founding Software Engineer</h5>
+                            <p class="mb-2 text-primary font-weight-bold">Earlyschool / Futca Technologies Limited | <small class="text-muted">2020 – 2021</small></p>
+                            <p class="text-muted mb-2">
+                                Co-founded and developed an early edtech management application with student enrollment and terminal report generation.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Expericence</h3>
+
+                <!-- Education -->
+                <div class="col-lg-6 mb-5">
+                    <h3 class="mb-4 font-weight-bold text-dark"><i class="fa fa-graduation-cap text-primary mr-2"></i>Education</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        
+                        <div class="position-relative mb-5">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Bachelor of Science (B.Sc.) in Computer Science</h5>
+                            <p class="mb-2 text-primary font-weight-bold">Ajayi Crowther University | <small class="text-muted">2021 – 2023</small></p>
+                            <p class="text-muted">
+                                Rigorous degree coursework covering distributed systems, advanced algorithms, database engineering, software design patterns, and computer architecture.
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-5">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Higher National Diploma (HND) in Computer Science</h5>
+                            <p class="mb-2 text-primary font-weight-bold">Kwara State Polytechnic | <small class="text-muted">2017 – 2019</small></p>
+                            <p class="text-muted">
+                                Focused on network infrastructure, telecommunications, database management systems, and hardware-software system administration.
+                            </p>
+                        </div>
+
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">AI Engineer (LLMOPs/MLOPs)</h5>
-                            <p class="mb-2"><strong>CareerOnDemand, VBOHQ (USA)</strong> | <small>2023 - PRESENT</small></p>
-                            <p>Leading the deployment and operations of large language models (LLMs) and machine learning models in production environments. Collaborating with cross-functional teams to optimize AI workflows and ensure the scalability and reliability of AI systems.</p>
+                            <h5 class="font-weight-bold mb-1">National Diploma (ND) in Computer Science</h5>
+                            <p class="mb-2 text-primary font-weight-bold">Kwara State Polytechnic | <small class="text-muted">2014 – 2016</small></p>
+                            <p class="text-muted">
+                                Practical foundation in programming methodologies, data structures, electronic circuits, and computer systems engineering.
+                            </p>
                         </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Software Engineer / IT Advisor</h5>
-                            <p class="mb-2"><strong>InstinctWave Group / Africa digital Economy Forum (ADEFORUM) (Ghana)</strong> | <small>2021 - 2023</small></p>
-                            <p>Provided IT advisory services and software development expertise. Played a key role in digital transformation projects, enabling businesses to leverage technology for growth and efficiency.</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Software Engineer / Co-Founder</h5>
-                            <p class="mb-2"><strong>Earlyschool, Futca Technologies Limited</strong> | <small>2021</small></p>
-                            <p>Co-founded a tech startup focused on educational technology solutions. Developed and launched a platform aimed at enhancing the learning experience through innovative software applications.</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -229,132 +505,124 @@
     </div>
     <!-- Qualification End -->
 
-
     <!-- Skill Start -->
     <div class="container-fluid py-5" id="skill">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Expertise</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Technical Pillars</h1>
             </div>
-            <div class="row align-items-center">
-                <!-- Data Engineering Skills -->
-                <div class="col-md-4">
-                    <h3 class="text-center text-primary mb-4">Data Engineering</h3>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Python</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">SQL (MySQL, PostgreSQL)</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">NoSQL (MongoDB, Firebase)</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">AWS/GCP/VPS Administration</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+
+            <div class="row">
+                <!-- Domain 1: Backend & Distributed -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-server"></i>Backend & Distributed</h4>
+                        <p class="text-muted small">High-throughput, event-driven API cores, multi-tenant isolation, and resilient microservices.</p>
+                        <div>
+                            <span class="badge-tech">Node.js</span>
+                            <span class="badge-tech">Fastify</span>
+                            <span class="badge-tech">TypeScript</span>
+                            <span class="badge-tech">Express</span>
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">REST APIs</span>
+                            <span class="badge-tech">WebSockets (Socket.IO)</span>
+                            <span class="badge-tech">Multi-Tenancy</span>
+                            <span class="badge-tech">Idempotent Systems</span>
+                            <span class="badge-tech">Microservices</span>
                         </div>
                     </div>
                 </div>
-                <!-- Software Engineering Skills -->
-                <div class="col-md-4">
-                    <h3 class="text-center text-primary mb-4">Software Engineering</h3>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">JavaScript/TypeScript</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Next.js, React.js</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Node.js</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Communication & Leadership</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+
+                <!-- Domain 2: Frontend & Mobile -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-mobile-alt"></i>Frontend & Mobile</h4>
+                        <p class="text-muted small">Modern web and native mobile interfaces with responsive design, state management, and speed.</p>
+                        <div>
+                            <span class="badge-tech">Flutter (Mobile)</span>
+                            <span class="badge-tech">Dart</span>
+                            <span class="badge-tech">Next.js</span>
+                            <span class="badge-tech">React.js</span>
+                            <span class="badge-tech">Tailwind CSS</span>
+                            <span class="badge-tech">react-icons</span>
+                            <span class="badge-tech">Monaco Editor</span>
+                            <span class="badge-tech">Responsive Design</span>
+                            <span class="badge-tech">State Management</span>
                         </div>
                     </div>
                 </div>
-                <!-- AI Engineering Skills -->
-                <div class="col-md-4">
-                    <h3 class="text-center text-primary mb-4">AI Engineering</h3>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Prompt Engineering / Machine Learning</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Data Preprocessing & ETL</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+
+                <!-- Domain 3: Cloud Infrastructure & DevOps -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-cloud"></i>Cloud Infrastructure & DevOps</h4>
+                        <p class="text-muted small">Scale-to-zero serverless environments, automated CI/CD pipelines, and secure cloud orchestration.</p>
+                        <div>
+                            <span class="badge-tech">Google Cloud Run</span>
+                            <span class="badge-tech">Cloud Build</span>
+                            <span class="badge-tech">Artifact Registry</span>
+                            <span class="badge-tech">Workload Identity Fed</span>
+                            <span class="badge-tech">AWS (EC2, S3)</span>
+                            <span class="badge-tech">Docker</span>
+                            <span class="badge-tech">GitHub Actions</span>
+                            <span class="badge-tech">Scale-to-Zero</span>
+                            <span class="badge-tech">Linux Systems</span>
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Model Deployment & MLOps</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <!-- Domain 4: Databases & In-Memory -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-database"></i>Databases & In-Memory</h4>
+                        <p class="text-muted small">Complex aggregation pipelines, high-speed caching, pub/sub layers, and transactional integrity.</p>
+                        <div>
+                            <span class="badge-tech">MongoDB Aggregation</span>
+                            <span class="badge-tech">Mongoose</span>
+                            <span class="badge-tech">Redis Caching</span>
+                            <span class="badge-tech">Redis Pub/Sub</span>
+                            <span class="badge-tech">Rate Limiting</span>
+                            <span class="badge-tech">PostgreSQL</span>
+                            <span class="badge-tech">MySQL</span>
+                            <span class="badge-tech">Query Profiling</span>
+                            <span class="badge-tech">ETL Pipelines</span>
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Deep Learning (TensorFlow, PyTorch)</h6>
-                            <h6 class="font-weight-bold">85%</h6>
+                </div>
+
+                <!-- Domain 5: Applied AI & Models -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-brain"></i>Applied AI & Orchestration</h4>
+                        <p class="text-muted small">Multi-model LLM routing with Gemini & OpenAI, curriculum RAG, and local-first progress caching.</p>
+                        <div>
+                            <span class="badge-tech">Google Gemini API</span>
+                            <span class="badge-tech">OpenAI API (GPT-4o)</span>
+                            <span class="badge-tech">Curriculum-Aware RAG</span>
+                            <span class="badge-tech">Vector Search</span>
+                            <span class="badge-tech">Semantic Caching</span>
+                            <span class="badge-tech">Prompt Engineering</span>
+                            <span class="badge-tech">Local-First AI Cache</span>
+                            <span class="badge-tech">Evaluation Frameworks</span>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <!-- Domain 6: IoT & Hardware Systems -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-microchip"></i>IoT & Edge Systems</h4>
+                        <p class="text-muted small">Offline-first hardware appliances designed for environments with intermittent connectivity.</p>
+                        <div>
+                            <span class="badge-tech">ESP32 (WROOM)</span>
+                            <span class="badge-tech">C++ / FreeRTOS / Arduino</span>
+                            <span class="badge-tech">R307 Optical Sensor</span>
+                            <span class="badge-tech">I2C OLED Displays</span>
+                            <span class="badge-tech">DS3231 RTC</span>
+                            <span class="badge-tech">Offline Queue Protocols</span>
+                            <span class="badge-tech">Hardware-Cloud Sync</span>
+                            <span class="badge-tech">Edge Storage</span>
                         </div>
                     </div>
                 </div>
@@ -367,121 +635,201 @@
     <div class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Projects</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Systems</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Architecture & Projects</h1>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-4">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".ai">AI Engineering</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".webdev">Web Development</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".cloud">Cloud & DevOps</li>
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All Systems</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".backend">Backend & SaaS</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".mobile">Mobile & AI</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".cloud">Cloud & Sandbox</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".iot">IoT Hardware</li>
                     </ul>
                 </div>
             </div>
+
             <div class="row portfolio-container">
-                <!-- AI Engineering Project 1 -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item ai">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/desktop.png" alt="AI Project 3">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="javascript:void(0);" onclick="alert('This project is in a private repository due to confidentiality agreements. Contact me for more details!');">
-                                <i class="fa fa-lock text-white" style="font-size: 60px;"></i>
-                            </a>
+                <!-- Project 1: ZED Backend Core -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item backend cloud">
+                    <div class="project-card">
+                        <div class="project-card-body">
+                            <span class="project-tag">Distributed Backend & SaaS</span>
+                            <h5 class="font-weight-bold text-dark">ZED Multi-Tenant Core Platform</h5>
+                            <p class="text-muted small">
+                                Production enterprise API backend orchestrating school operations, student records, fee billing, and CBT exams. Features multi-tenant database isolation, deterministic academic grade computations, and Redis pub/sub.
+                            </p>
+                            <div class="stat-badge small">
+                                <strong>Stack:</strong> Fastify, TypeScript, MongoDB, Redis, Docker, GCP Cloud Run
+                            </div>
+                            <div class="project-links d-flex justify-content-between align-items-center">
+                                <a href="https://school.zionai.com.ng" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-external-link-alt mr-1"></i>Live Platform
+                                </a>
+                                <a href="https://github.com/olasegirioluwa3/zed-api-fast-aws" target="_blank" class="btn btn-sm btn-outline-dark">
+                                    <i class="fab fa-github mr-1"></i>Repository
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <h5 class="text-center">AI Solution for Customer Support Platform</h5>
-                    <p class="text-center">Developed a platform using machine learning and Natural Language Processing model to improve user engagement, leading to a 20% increase in conversion rates. Built with Python and NodeJS, GPT-3.5, and Cloud, ZionAI.</p>
                 </div>
-                <!-- Web Development Project 1 -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item webdev">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/zru.png" alt="Web Dev Project 1">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="javascript:void(0);" onclick="alert('This project is in a private repository due to confidentiality agreements. Contact me for more details!');">
-                                <i class="fa fa-lock text-white" style="font-size: 60px;"></i>
-                            </a>
+
+                <!-- Project 2: ZED Prepare AI (Flutter & Gemini/OpenAI) -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item mobile">
+                    <div class="project-card">
+                        <div class="project-card-body">
+                            <span class="project-tag">Mobile App & Multi-Model AI</span>
+                            <h5 class="font-weight-bold text-dark">ZED Prepare AI (Flutter & Node.js)</h5>
+                            <p class="text-muted small">
+                                Cross-platform mobile learning application built with <strong>Flutter</strong> and backed by <strong>Node.js</strong>. Integrates <strong>Google Gemini and OpenAI</strong> for curriculum-aware RAG quiz generation with a local-first device storage model.
+                            </p>
+                            <div class="stat-badge small">
+                                <strong>Stack:</strong> Flutter (Dart), Node.js, Google Gemini, OpenAI, Vector Search
+                            </div>
+                            <div class="project-links d-flex justify-content-between align-items-center">
+                                <a href="https://play.google.com/store/apps/details?id=ng.com.zionai.prepareai" target="_blank" class="btn btn-sm btn-success">
+                                    <i class="fab fa-google-play mr-1"></i>Google Play Store
+                                </a>
+                                <a href="https://prepareai.zionai.com.ng" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-globe mr-1"></i>Web
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <h5 class="text-center">Full-Stack Corporate Website / Platform</h5>
-                    <p class="text-center">Developed with Next.js and Node.js, featuring user authentication, analytical dashboards, portals and robust payment integrations, Zion Reborn University.</p>
                 </div>
-                <!-- Cloud & DevOps Project 1 -->
+
+                <!-- Project 3: Alphado App-Builder -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item cloud">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/thrivebizng.png" alt="Cloud Project 1">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="javascript:void(0);" onclick="alert('This project is in a private repository due to confidentiality agreements. Contact me for more details!');">
-                                <i class="fa fa-lock text-white" style="font-size: 60px;"></i>
-                            </a>
+                    <div class="project-card">
+                        <div class="project-card-body">
+                            <span class="project-tag">AI App-Builder & Runtime</span>
+                            <h5 class="font-weight-bold text-dark">Alphado Autonomous App-Builder</h5>
+                            <p class="text-muted small">
+                                Developer platform turning natural language prompts into live, runnable web applications inside isolated browser and container runtimes. Features real-time editing, Lifo runtime execution, and automated deployment pipelines.
+                            </p>
+                            <div class="stat-badge small">
+                                <strong>Stack:</strong> Next.js, Node.js, Lifo, Monaco Editor, GCP
+                            </div>
+                            <div class="project-links d-flex justify-content-between align-items-center">
+                                <a href="https://alphado.zionai.com.ng" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fa fa-external-link-alt mr-1"></i>Live: alphado.zionai.com.ng
+                                </a>
+                                <span class="badge badge-info py-1 px-2">Active R&D</span>
+                            </div>
                         </div>
                     </div>
-                    <h5 class="text-center">Automated CI/CD Pipeline</h5>
-                    <p class="text-center">Implemented using AWS EC2 and Git Actions to streamline deployment processes for microservices architecture, GIZ.</p>
                 </div>
-                <!-- AI Engineering Project 2 -->
-                
-                <!-- Web Development Project 2 -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item webdev">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/airplane.jpg" alt="Web Dev Project 2">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/olasegirioluwa3/rent-or-buy-airplane-py" target="_blank">
-                                <i class="fa fa-github text-white" style="font-size: 60px;"></i>
-                            </a>
+
+                <!-- Project 4: ZED Biometric Edge Device -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item iot">
+                    <div class="project-card">
+                        <div class="project-card-body">
+                            <span class="project-tag">IoT Hardware & Firmware</span>
+                            <h5 class="font-weight-bold text-dark">ZED Biometric / ZHR Edge Appliance</h5>
+                            <p class="text-muted small">
+                                Custom offline-first attendance hardware appliance with ESP32 and R307 optical fingerprint sensor. Built to store 500+ biometric templates locally, processing 150+ staff check-ins within 15 minutes offline, with automatic cloud sync.
+                            </p>
+                            <div class="stat-badge small">
+                                <strong>Stack:</strong> ESP32 WROOM, C++/FreeRTOS, R307 Sensor, I2C OLED, REST Sync
+                            </div>
+                            <div class="project-links d-flex justify-content-between align-items-center">
+                                <a href="https://school.zionai.com.ng" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-microchip mr-1"></i>System Overview
+                                </a>
+                                <span class="badge badge-success py-1 px-2">Deployed in Pilot</span>
+                            </div>
                         </div>
                     </div>
-                    <h5 class="text-center">Application built to determine Airplane Aquisition</h5>
-                    <p class="text-center">Built with Python, Screamlit, and bootstrap App to calculate cost of renting or buying an airplane.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item webdev">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/real-estate.jpg" alt="Web Dev Project 2">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="https://github.com/olasegirioluwa3/real-estate" target="_blank">
-                                <i class="fa fa-github text-white" style="font-size: 60px;"></i>
-                            </a>
+
+                <!-- Project 5: ZED CBT Engine -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item backend mobile">
+                    <div class="project-card">
+                        <div class="project-card-body">
+                            <span class="project-tag">Examination Engine & AI</span>
+                            <h5 class="font-weight-bold text-dark">ZED CBT Examination Engine</h5>
+                            <p class="text-muted small">
+                                High-concurrency Computer-Based Testing platform supporting institutional timed exams, automated question shuffling, instant grading algorithms, and document-to-quiz synthesis for national examination prep.
+                            </p>
+                            <div class="stat-badge small">
+                                <strong>Stack:</strong> Node.js, Fastify, MongoDB, Redis, WebSockets, AI APIs
+                            </div>
+                            <div class="project-links d-flex justify-content-between align-items-center">
+                                <a href="https://cbt.zionai.com.ng" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-external-link-alt mr-1"></i>Live CBT
+                                </a>
+                                <span class="badge badge-info py-1 px-2">Production</span>
+                            </div>
                         </div>
                     </div>
-                    <h5 class="text-center">Python based Real Estate Listing API</h5>
-                    <p class="text-center">Built with Python, Flask and MySQL for listing of real estate products.</p>
                 </div>
-                
-                
+
+                <!-- Project 6: Zion Centralized Identity -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item backend cloud">
+                    <div class="project-card">
+                        <div class="project-card-body">
+                            <span class="project-tag">Identity & Security</span>
+                            <h5 class="font-weight-bold text-dark">Zion Account (SSO & Identity)</h5>
+                            <p class="text-muted small">
+                                Centralized Single Sign-On and identity management service powering unified authentication across all Zion products. Enforces JWT token rotation, cryptographic validation, and multi-tenant authorization policies.
+                            </p>
+                            <div class="stat-badge small">
+                                <strong>Stack:</strong> Node.js, Fastify, Redis, MongoDB, OAuth 2.0 / JWT
+                            </div>
+                            <div class="project-links d-flex justify-content-between align-items-center">
+                                <a href="https://account.zionai.com.ng" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-external-link-alt mr-1"></i>Identity Portal
+                                </a>
+                                <span class="badge badge-info py-1 px-2">Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>    
+    <!-- Portfolio End -->
 
     <!-- Contact Start -->
     <div class="container-fluid py-5" id="contact">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Connect</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Get In Touch</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3 class="mb-4">Let's Build Scalable Systems Together</h3>
+                    <p class="lead text-muted mb-4">
+                        I am currently open to high-impact opportunities: <strong>Staff / Principal Full-Stack & Backend Roles</strong>, <strong>Founding Technical Architectures</strong>, and <strong>High-Level Technical Advisory</strong> for global technology organizations.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="mailto:olasegirioluwafemi@gmail.com" class="btn btn-primary btn-lg mx-2 mb-3 shadow">
+                            <i class="fa fa-envelope mr-2"></i>Email: olasegirioluwafemi@gmail.com
+                        </a>
+                        <a href="https://wa.me/2348101336055" target="_blank" class="btn btn-success btn-lg mx-2 mb-3 shadow">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp: +234 810 133 6055
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Contact End -->
 
-
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="https://x.com/olasegirioluwa3" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://web.facebook.com/olasegirioluwafemi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/olasegirioluwa3" target="_blank"><i class="fab fa-github"></i></a>
                 <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/oluwafemi-olasegiri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="https://www.instagram.com/olasegirioluwafemi" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://x.com/olasegirioluwa3" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="mailto:olasegirioluwafemi@gmail.com"><i class="fa fa-envelope"></i></a>
             </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Privacy</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Terms</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">FAQs</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Help</a>
-            </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            <p class="m-0 font-weight-light">
+                &copy; <span class="font-weight-bold">Oluwafemi Olasegiri</span> — Zion Reborn Limited. All Rights Reserved.
             </p>
         </div>
     </div>
@@ -503,13 +851,8 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    
 </body>
 
 </html>
